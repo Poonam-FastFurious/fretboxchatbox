@@ -1,5 +1,5 @@
 import express from "express";
-import { protectRoute } from "../../middleware/auth.middleware.js";
+
 import multer from "multer";
 import {
   deleteMessage,
@@ -7,6 +7,7 @@ import {
   sendMessage,
   sendMessageWithPoll,
 } from "./Chat.controler.js";
+import { protectRoute } from "../../middleware/auth.middleware.js";
 
 const router = express.Router();
 const storage = multer.memoryStorage();
